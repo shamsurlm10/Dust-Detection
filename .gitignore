@@ -1,4 +1,5 @@
 venv/
 .env
+training/AugmentedImages
 training/datasets
 training/datasets_alt
