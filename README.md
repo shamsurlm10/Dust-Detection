@@ -17,3 +17,10 @@ A
 --- if docker don't respond ---
 net stop winnat
 net start winnat
+
+--- frontend ---
+Install Nodejs
+Install npm
+cd frontend
+npm install --from-lock-json
+npm audit fix
