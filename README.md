@@ -24,3 +24,10 @@ Install npm
 cd frontend
 npm install --from-lock-json
 npm audit fix
+
+--- pull from git ---
+git clone https://github.com/shamsurlm10/Dust-Detection.git
+cd Dust-Detection/
+python -m virtualenv venv
+source venv/Scripts/activate
+pip install -r requirements.txt

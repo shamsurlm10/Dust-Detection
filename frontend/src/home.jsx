@@ -9,8 +9,6 @@ import React from "react";
 import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
 import { Paper, CardActionArea, CardMedia, Grid, TableContainer, Table, TableBody, TableHead, TableRow, TableCell, Button, CircularProgress } from "@material-ui/core";
-import cblogo from "./cblogo.PNG";
-import image from "./bg.png";
 import { DropzoneArea } from 'material-ui-dropzone';
 import { common } from '@material-ui/core/colors';
 import Clear from '@material-ui/icons/Clear';
@@ -58,7 +56,6 @@ const useStyles = makeStyles((theme) => ({
     padding: "4em 1em 0 1em",
   },
   mainContainer: {
-    backgroundImage: `url(${image})`,
     backgroundRepeat: 'no-repeat',
     backgroundPosition: 'center',
     backgroundSize: 'cover',
@@ -67,10 +64,10 @@ const useStyles = makeStyles((theme) => ({
   },
   imageCard: {
     margin: "auto",
-    maxWidth: 400,
+    maxWidth: 600,
     height: 500,
     backgroundColor: 'transparent',
-    boxShadow: '0px 9px 70px 0px rgb(0 0 0 / 30%) !important',
+    boxShadow: '0px 9px 70px 0px rgba(249, 211, 180, 0.4) !important',
     borderRadius: '15px',
   },
   imageCardEmpty: {
@@ -104,7 +101,7 @@ const useStyles = makeStyles((theme) => ({
     fontSize: '22px',
     backgroundColor: 'transparent !important',
     borderColor: 'transparent !important',
-    color: '#000000a6 !important',
+    color: 'white',
     fontWeight: 'bolder',
     padding: '1px 24px 1px 16px',
   },
@@ -112,7 +109,7 @@ const useStyles = makeStyles((theme) => ({
     fontSize: '14px',
     backgroundColor: 'transparent !important',
     borderColor: 'transparent !important',
-    color: '#000000a6 !important',
+    color: 'white',
     fontWeight: 'bolder',
     padding: '1px 24px 1px 16px',
   },
@@ -128,7 +125,8 @@ const useStyles = makeStyles((theme) => ({
     width: "100%",
   },
   detail: {
-    backgroundColor: 'white',
+    backgroundColor: '#212426',
+    color:'white',
     display: 'flex',
     justifyContent: 'center',
     flexDirection: 'column',
@@ -211,15 +209,9 @@ export const ImageUpload = () => {
 
   return (
     <React.Fragment>
-      <AppBar position="static" className={classes.appbar}>
-        <Toolbar>
-          <Typography className={classes.title} variant="h6" noWrap>
-            CodeBasics: Potato Disease Classification
-          </Typography>
-          <div className={classes.grow} />
-          <Avatar src={cblogo}></Avatar>
-        </Toolbar>
-      </AppBar>
+      <div className="header">
+        <h1 className='title'>Solar Panel Dust Detction</h1>
+      </div>
       <Container maxWidth={false} className={classes.mainContainer} disableGutters={true}>
         <Grid
           className={classes.gridContainer}
@@ -240,14 +232,14 @@ export const ImageUpload = () => {
                 />
               </CardActionArea>
               }
-              {!image && <CardContent className={classes.content}>
+              {!image && 
                 <DropzoneArea
                   acceptedFiles={['image/*']}
                   maxFileSize= {10000000}
-                  dropzoneText={"Drag and drop an image of a potato plant leaf to process"}
+                  dropzoneText={"Drag and drop a solar panel image"}
                   onChange={onSelectFile}
                 />
-              </CardContent>}
+                }
               {data && <CardContent className={classes.detail}>
                 <TableContainer component={Paper} className={classes.tableContainer}>
                   <Table className={classes.table} size="small" aria-label="simple table">
