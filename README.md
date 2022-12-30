@@ -3,8 +3,8 @@ source venv/Scripts/activate
 
 pip install requirements.txt
 
---- If a port not free ---
-netstat -ano | findstr :<PORT>
+--- If a port not free --- <br>
+netstat -ano | findstr :<PORT> <br>
 taskkill /PID <PID> /F
   
 --- Its for my direction path ----
