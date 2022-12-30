@@ -4,8 +4,8 @@ source venv/Scripts/activate
 pip install requirements.txt
 
 --- If a port not free --- <br>
-netstat -ano | findstr :<PORT> <br>
-taskkill /PID <PID> /F
+netstat -ano | findstr : ' ' <br>
+taskkill /PID ' ' /F
   
 --- Its for my direction path ----
 docker run -t --rm -p 8502:8502 -v D:/Study/Ziuq/EWUonline/400b/Dust-Detection:/Dust-Detection tensorflow/serving --rest_api_port=8501 --model_config_file=/Dust-Detection/models.config
