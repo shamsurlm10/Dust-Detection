@@ -1,7 +1,7 @@
 # Dust-Detection
 source venv/Scripts/activate
 
-pip install requirements.txt
+pip install -r requirements.txt
 
 --- If a port not free --- <br>
 netstat -ano | findstr : ' ' <br>
