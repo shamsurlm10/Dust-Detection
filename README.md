@@ -31,3 +31,8 @@ cd Dust-Detection/
 python -m virtualenv venv
 source venv/Scripts/activate
 pip install -r requirements.txt
+
+--- Mobile App ---
+https://www.youtube.com/watch?v=-5WLKu_J_AE
+choco install -y nodejs-lts microsoft-openjdk11
+
